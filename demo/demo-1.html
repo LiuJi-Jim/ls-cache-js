@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ls-cache-js Demo</title>
+</head>
+<body>
+    
+</body>
+<script src="../dist/ls-cache.min.js"></script>
+<script>
+  lsCache.use(['logger.js', 'demo-1.js', 'demo-2.js'], function(logger, d1, d2){
+    logger.log('main is here');
+    logger.log('main says d1 = ' + d1);
+    logger.log('main says d2 = ' + d2);
+  });
+</script>
+</html>
