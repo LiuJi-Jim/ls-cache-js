@@ -40,7 +40,13 @@ lsCache(['zepto.js', 'logger.js'], function($, logger){
 ### HOW DOES THIS WORK?
 ```
 function lsCache(requires, fn){
-  var fnStr = fn.toString();
-  localStorage['xxx'] = fnStr;
+  var fnStr = fn.toString(); // get the raw string of the module function
+  localStorage['xxx'] = fnStr; // save it to localStorage
+
+  //...
+
+  var fnStr = localStorage['xxx'], // read the string from localStorage
+      fn = (new Function('return ' + fnStr))(), // build it into a function
+      module = fn(); // call it
 }
 ```
