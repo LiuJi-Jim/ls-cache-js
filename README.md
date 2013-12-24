@@ -7,9 +7,10 @@ A library to use localStorage to cache JS modules in modern browsers.
 
 * define and require modules
 * track dependencies
-* load and cache js files
+* load js when not cached
+* cache js using localStorage
 
 ### TODO
 
 * localStorage version control and explicitly flushing
-* relative path supporting
+* relative path and alias supporting
