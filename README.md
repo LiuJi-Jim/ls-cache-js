@@ -35,3 +35,4 @@ lsCache(['zepto.js', 'logger.js'], function($, logger){
 ```
 * when `demo-1.js` is not cached, it will be added as a `<script>` tag. then it will be cached.
 * when it's cached, it will be loaded from localStorage without any other network spending.
+* --recursively
